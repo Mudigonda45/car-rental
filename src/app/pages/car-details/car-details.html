@@ -1,0 +1,12 @@
+<h2>{{car?.name}}</h2>
+
+<img [src]="'https://car-rental-backend-aszs.onrender.com' + car?.imageUrl" width="300">
+
+<p>Model: {{car?.model}}</p>
+
+<p>Price: ₹{{car?.pricePerDay}}</p>
+
+<button routerLink="/cars">
+    <!-- <button [routerLink]="['/car', car.id]"></button> -->
+Back
+</button>

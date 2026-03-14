@@ -1,0 +1,99 @@
+/* Container for all cards */
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+/* Individual car card */
+.car-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover effect */
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Car image styling */
+.car-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.car-card:hover .car-image img {
+  transform: scale(1.05);
+}
+
+/* Car details */
+.car-details {
+  padding: 1rem 1.5rem;
+}
+
+.car-details h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.car-details .model {
+  color: #777;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.car-details .price {
+  color: #2a9d8f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Book button */
+.book-btn {
+  margin: 1rem;
+  padding: 0.6rem 1.5rem;
+  background: #e76f51;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.book-btn:hover {
+  background: #f28482;
+  transform: translateY(-2px);
+}
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .car-card {
+    margin: 0 auto;
+  }
+}
